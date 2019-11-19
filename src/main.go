@@ -6,6 +6,7 @@ import (
     "os"
     "github.com/joho/godotenv"
     "example_app/config"
+    "example_app/controller"
 )
 
 func init() {
@@ -20,6 +21,7 @@ func main() {
 
 func startApp() {
     router := config.SetupRouter()
+    controller.LoadRouter(router)
     serverHost := os.Getenv("SERVER_ADDRESS")
     serverPort := os.Getenv("SERVER_PORT")
     serverString := fmt.Sprintf("%s:%s", serverHost, serverPort)

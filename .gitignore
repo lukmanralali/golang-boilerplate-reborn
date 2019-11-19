@@ -2,3 +2,4 @@
 src/.DS_Store
 go-pckg/*
 src/vendor/*
+coverage.out
