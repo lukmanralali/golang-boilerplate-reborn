@@ -36,4 +36,4 @@ go test -coverprofile=coverage.out ./...
 * jika dirasa informasi coverage kurang lengkap, bisa dilanjutkan dengan perintah berikut
 ```bash
 go tool cover -func=coverage.out
-```bash
+```
