@@ -5,7 +5,8 @@ RUN apk update && \
     apk add bash git && \
     apk add gcc && \
     apk add musl-dev && \
-    apk add curl
+    apk add curl && \
+    apk add --update make
 
 # We create an /app directory within our
 # image that will hold our application source
@@ -29,4 +30,4 @@ RUN go get -u github.com/golang/dep/cmd/dep
 # RUN go build -o main .
 # Our start command which kicks off
 # our newly created binary executable
-# CMD ["go","/go_app/main"]
+CMD ["make","run"]
